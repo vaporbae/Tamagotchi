@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{88889C8E-818F-4CA1-9EFE-5737723F3D1E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>TamagotchiConsoleGame</RootNamespace>
+    <AssemblyName>TamagotchiConsoleGame</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Colorful.Console, Version=1.2.9.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Colorful.Console.1.2.9\lib\net461\Colorful.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Tamagotchi\Activities\GameMainActivity\GameMainActivityTimerEvents.cs" />
+    <Compile Include="Tamagotchi\Activities\GameMainActivity\GameMainActivityTimer.cs" />
+    <Compile Include="Tamagotchi\Activities\GameMainActivity\GameMainActivityDayNight.cs" />
+    <Compile Include="Tamagotchi\Activities\GameMainActivity\GameMainActivityMenu.cs" />
+    <Compile Include="Tamagotchi\Activities\GameMainActivity\GameMainActivityHatching.cs" />
+    <Compile Include="Tamagotchi\Activities\FoodMenuActivity.cs" />
+    <Compile Include="Tamagotchi\Activities\GameMainActivity\GameMainActivity.cs" />
+    <Compile Include="Tamagotchi\Activities\EmptyActivity.cs" />
+    <Compile Include="Tamagotchi\Activities\GameMainActivity\GameMainActivityCharacter.cs" />
+    <Compile Include="Tamagotchi\Activities\GameRopeActivity.cs" />
+    <Compile Include="Tamagotchi\Activities\GameStatsActivity.cs" />
+    <Compile Include="Tamagotchi\Activities\OptionsActivity.cs" />
+    <Compile Include="Tamagotchi\Activities\ConfirmResetActivity.cs" />
+    <Compile Include="Tamagotchi\Activities\StartGameActivity.cs" />
+    <Compile Include="Tamagotchi\GameSettings.cs" />
+    <Compile Include="TextGraphicsEngine\Controls\IMotionAnimated.cs" />
+    <Compile Include="TextGraphicsEngine\Controls\TGEEvents.cs" />
+    <Compile Include="UI\Activity.cs" />
+    <Compile Include="UI\Textbox.cs" />
+    <Compile Include="UI\Button.cs" />
+    <Compile Include="Tamagotchi\Character.cs" />
+    <Compile Include="Tamagotchi\Game.cs" />
+    <Compile Include="Tamagotchi\Resources\GameSprites.cs" />
+    <Compile Include="Tamagotchi\Resources\GameResources.cs" />
+    <Compile Include="Tamagotchi\Activities\MainActivity.cs" />
+    <Compile Include="UI\SpriteFactory.cs" />
+    <Compile Include="UI\Events.cs" />
+    <Compile Include="UI\IUIControl.cs" />
+    <Compile Include="UI\Menu.cs" />
+    <Compile Include="Tamagotchi\Serializer.cs" />
+    <Compile Include="TextGraphicsEngine\BitmapContainer.cs" />
+    <Compile Include="TextGraphicsEngine\ConsoleColorManager.cs" />
+    <Compile Include="TextGraphicsEngine\ConsoleManager.cs" />
+    <Compile Include="TextGraphicsEngine\Controls\IAnimated.cs" />
+    <Compile Include="TextGraphicsEngine\Deprecated\ConsoleImage.cs" />
+    <Compile Include="TextGraphicsEngine\IClearable.cs" />
+    <Compile Include="TextGraphicsEngine\Map.cs" />
+    <Compile Include="TextGraphicsEngine\Misc\BitmapDraw.cs" />
+    <Compile Include="TextGraphicsEngine\Misc\BitmapManipulation.cs" />
+    <Compile Include="TextGraphicsEngine\Misc\Font.cs" />
+    <Compile Include="TextGraphicsEngine\Misc\SpriteBitmap.cs" />
+    <Compile Include="TextGraphicsEngine\Misc\Coord.cs" />
+    <Compile Include="TextGraphicsEngine\Controls\OnScreenControl.cs" />
+    <Compile Include="TextGraphicsEngine\Controls\Sprite.cs" />
+    <Compile Include="TextGraphicsEngine\Controls\Text.cs" />
+    <Compile Include="TextGraphicsEngine\Buffer.cs" />
+    <Compile Include="TextGraphicsEngine\ScreenBuffer.cs" />
+    <Compile Include="TextGraphicsEngine\Cell.cs" />
+    <Compile Include="TextGraphicsEngine\TextGraphicsEngine.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TextGraphicsEngine\View.cs" />
+    <Compile Include="UI\ButtonFactory.cs" />
+    <Compile Include="UI\MultiLevelMenu.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>REM XCOPY "$(SolutionDir)Resources\*" "$(TargetDir)" /S /Y /D</PostBuildEvent>
+  </PropertyGroup>
+</Project>
